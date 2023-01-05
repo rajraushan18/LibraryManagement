@@ -1,4 +1,4 @@
 FROM openjdk:11
-AGR JAR_FILE
-COPY target/LibraryManagement.jar LibraryManagement.jar
+EXPOSE 8080
+ADD target/LibraryManagement.jar LibraryManagement.jar
 ENTRYPOINT ["java","-jar","/LibraryManagement.jar"]
