@@ -58,7 +58,7 @@ pipeline {
 	     steps{
 		script{
 			withCredentials([string(credentialsId: 'dockernewpwd', variable: 'dockernew-pwd')]) {
-				bat 'docker login -u rajraushan -p ${dockernew-pwd}'  
+				bat 'docker login -u rajraushan --password-stdin ${dockernew-pwd}'  
 			}	    	
 			bat 'docker push rajraushan/jenkins-docker'
 		}		    
