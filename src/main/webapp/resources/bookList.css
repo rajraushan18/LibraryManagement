@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+
+.navbar {
+	display: block;
+	padding: 10px 30px;
+}
+
+.navbar-brand {
+	text-align: center;
+}
+
+#username{
+	padding-right:10px;
+}
+
+.container{
+	text-align:center;
+	margin-top:20px;
+}
+.btn-outline-secondary, .delete{
+	display: inline-block;
+}
+.form-control {
+	width: 35%;
+	margin: 5px 0 5px 0;
+}
+
+.logout{
+	float:right;
+}
+
+h3{
+	display:inline-block;
+	margin-bottom:20px;
+}
+.addBook{
+	float: right;
+    display: inline;
+}
+#inputDataAdded{
+	background:none;
+	border: none;
+}
+.submitButton{
+	float:left;
+}
+.cancelButton{
+	float: left;
+    margin-left: 10px;
+}
