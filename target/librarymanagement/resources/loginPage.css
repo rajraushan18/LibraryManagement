@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.navbar {
+	display: block;
+	font-weight: bold;
+}
+
+.input-field {
+	margin: 20px 0 10px 0;
+}
+
+.inputText {
+	width: 75%;
+}
+
+.asterisk {
+	color: red;
+}
+
+.incorrect {
+	color: red;
+}
+
+.container {
+	padding: 20px;
+	margin-top: 80px;
+	border: 2px #848181 solid;
+	width: 50%;
+}

@@ -1,0 +1,10 @@
+com\nagarro\assignment\controller\BookManager.class
+com\nagarro\assignment\controller\BookManager$2.class
+com\nagarro\assignment\controller\HomeManager$1.class
+com\nagarro\assignment\model\User.class
+com\nagarro\assignment\controller\HomeManager.class
+com\nagarro\assignment\dao\Userdao.class
+com\nagarro\assignment\service\UserService.class
+com\nagarro\assignment\model\BookAuthors.class
+com\nagarro\assignment\model\Books.class
+com\nagarro\assignment\controller\BookManager$1.class
