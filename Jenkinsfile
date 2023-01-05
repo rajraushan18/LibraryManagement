@@ -40,18 +40,7 @@ pipeline {
 		}
 	      }
 	}   
-	    stage('push image to hub'){
-		    steps{
-			    script{
-				withCredentials([string(credentialsId: 'dockernewpwd', variable: 'dockernew-pwd')]) {
-					bat 'docker login -u rajraushan -p ${dockernew-pwd}'  
-}	    	
-				    bat 'docker push rajraushan/jenkins-docker'
-			    }
-			    
-		    }
-		    
-	    }
+	    
 	    
       	stage('Packaging') {
             steps {
@@ -65,6 +54,16 @@ pipeline {
                 echo 'Installing..'
             }
         }
+	 stage('push image to hub'){
+	     steps{
+		script{
+			withCredentials([string(credentialsId: 'dockernewpwd', variable: 'dockernew-pwd')]) {
+				sh 'docker login -u rajraushan -p ${dockernew-pwd}'  
+			}	    	
+			bat 'docker push rajraushan/jenkins-docker'
+		}		    
+	      }	    
+	 }
         
       
     }
