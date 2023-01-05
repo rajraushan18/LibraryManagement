@@ -1,4 +1,4 @@
-FROM openjdk:11#
+FROM openjdk:11
 AGR JAR_FILE
 COPY ${JAR_FILE} LibraryManagement.jar
 ENTRYPOINT ["java","-jar","/LibraryManagement.jar"]
