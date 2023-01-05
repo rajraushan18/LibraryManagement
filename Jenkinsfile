@@ -43,11 +43,12 @@ pipeline {
 	    stage('push image to hub'){
 		    steps{
 			    script{
-				withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerpwd')]) {
-					bat 'docker login -u rajraushan -p ${dockerpwd}'  
+				withCredentials([string(credentialsId: 'dockernewpwd', variable: 'dockernew-pwd')]) {
+					bat 'docker login -u rajraushan -p ${dockernew-pwd}'  
 }	    	
 				    bat 'docker push rajraushan/jenkins-docker'
 			    }
+			    
 		    }
 		    
 	    }
