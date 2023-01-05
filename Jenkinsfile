@@ -32,7 +32,14 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Packaging') {
+	stage('Build Docker Image'){
+		steps{
+			script{
+				sh 'docker build -t rajraushan/jenkins-docker .'
+			}
+		}
+	}    
+      	stage('Packaging') {
             steps {
                 bat 'mvn -f pom.xml package'
                 echo 'Packageing..'
