@@ -16,31 +16,31 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                bat 'mvn -f AdvancedJavaAssignment5/LibraryManagement/pom.xml clean'
+                bat 'mvn -f LibraryManagement/pom.xml clean'
                 echo 'Cleaning..'
             }
         }
         stage('Compile') {
             steps {
-                bat 'mvn -f AdvancedJavaAssignment5/LibraryManagement/pom.xml compile'
+                bat 'mvn -f LibraryManagement/pom.xml compile'
                 echo 'Compiling..'
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn -f AdvancedJavaAssignment5/LibraryManagement/pom.xml test'
+                bat 'mvn -f LibraryManagement/pom.xml test'
                 echo 'Testing..'
             }
         }
         stage('Packaging') {
             steps {
-                bat 'mvn -f AdvancedJavaAssignment5/LibraryManagement/pom.xml package'
+                bat 'mvn -f LibraryManagement/pom.xml package'
                 echo 'Packageing..'
             }
         }
         stage('Install') {
             steps {
-                bat 'mvn -f AdvancedJavaAssignment5/LibraryManagement/pom.xml install'
+                bat 'mvn -f LibraryManagement/pom.xml install'
                 echo 'Installing..'
             }
         }
