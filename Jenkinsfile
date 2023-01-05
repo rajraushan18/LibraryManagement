@@ -10,7 +10,7 @@ pipeline {
 		stage("Checkout code"){
 			steps
 			{
-				checkout scmGit(branches: [[name: '*/master']], browser: github('https://github.com/rajraushan18/Advanced_Assignment5/tree/master/AdvancedJavaAssignment5/LibraryManagement'), extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajraushan18/Advanced_Assignment5.git']])
+				checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajraushan18/LibraryManagement.git']])
 				echo 'Check Out'
 			}
         }
