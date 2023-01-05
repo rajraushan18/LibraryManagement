@@ -58,7 +58,7 @@ pipeline {
 	     steps{
 		script{
 			withCredentials([string(credentialsId: 'dockernewpwd', variable: 'dockernew-pwd')]) {
-				bat 'winpty docker login --username rajraushan --password-stdin ${dockernew-pwd}'  
+				echo '${dockernew-pwd} | docker login -u rajraushan --password-stdin'  
 			}	    	
 			bat 'docker push rajraushan/jenkins-docker'
 		}		    
