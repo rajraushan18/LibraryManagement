@@ -33,11 +33,12 @@ pipeline {
             }
         }
 	stage('Build Docker Image'){
-		steps{
-			script{
-				sh 'docker build -t rajraushan/jenkins-docker .'
-			}
+	     steps{
+		script{
+			bat 'docker build -t rajraushan/jenkins-docker .'
+			echo 'building docker image..'
 		}
+	      }
 	}    
       	stage('Packaging') {
             steps {
